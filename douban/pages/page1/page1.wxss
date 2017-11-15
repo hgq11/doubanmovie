@@ -1,0 +1,31 @@
+/* pages/page1/page1.wxss */
+.listbox{
+   border-bottom:1px solid #e6e6e6;
+}
+.detail{
+  width:90%;
+  margin:10px auto;
+}
+.word{
+    width:50%;
+    margin-left:10px;
+    color:#999;
+}
+.title{
+ color:#000;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  margin-top:10px;
+  font-size:18px;
+  font-weight:bold;
+
+}
+.moviesImg{
+  width:84px;
+	height:117px;
+}
+.directors,.casts{
+  font-size:10px;
+  line-height: 15px;
+}

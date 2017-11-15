@@ -1,0 +1,40 @@
+<view>
+    <!-- 轮播 -->
+		<swiper indicator-dots class="lb"
+  autoplay="true" interval="{{interval}}" duration="{{duration}}" circular style="height:160px;" >
+  <block wx:for="{{all_info[2].movies}}">
+    <swiper-item>
+      <image src="{{item.images.small}}" class="slide-image"></image>
+    </swiper-item>
+  </block>
+</swiper>
+	<!-- 标题 -->
+<view wx:for="{{all_info}}">
+   <navigator class="title" url = "../page1/page1?requesturl={{item.requestUrl}}" > {{item.title}}<view style="float:right;">>></view></navigator> 
+	
+	 <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+	
+    <view class="la1" wx:for="{{item.movies}}" wx:for-item="itemName1">
+		 <navigator url="../page2/page2?id={{itemName1.id}}">
+			<image wx:if="{{itemName1.images.small}}" src="{{itemName1.images.small}}"></image>	</navigator>
+			<view wx:if="{{itemName1.images.small}}"  class="movieName">{{itemName1.title}}</view>
+		
+	 <navigator url="../page2/page2?id={{itemName1.subject.id}}">
+      <image wx:if="{{itemName1.subject.images.small}}"src="{{itemName1.subject.images.large}}"></image> </navigator> 
+      	<view wx:if="{{itemName1.subject.images.small}}" class="movieName">{{itemName1.subject.title}}</view>
+		
+
+		</view>
+		
+  </scroll-view>
+
+
+</view>
+	
+
+
+
+
+
+</view>
+

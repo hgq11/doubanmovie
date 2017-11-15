@@ -1,0 +1,13 @@
+
+<view >
+	<swiper indicator-dots
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular style="height:{{height}}px" bindchange="checkVal" wx:key="{{a}}">
+  <block wx:for="{{movies}}">
+    <swiper-item >
+      <image src="{{item.images.large}}" class="slide-image"/>
+			<button bindtap="toIndex" class="enjoy" wx:if="{{show === true}}"> 立即体验 </button>
+    </swiper-item>
+  </block>
+</swiper>
+
+</view>

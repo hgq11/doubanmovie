@@ -1,0 +1,37 @@
+<view wx:for="{{movies}}" class="listbox">
+    <view style="overflow:hidden;" class="detail">
+<!-- 海报 -->
+	<navigator class="topage2" url="../page2/page2?id={{item.id}}" wx:if="{{item.id}}">
+     <view class="poster" style="float:left">
+         <image class="moviesImg" src="{{item.images.small}}" wx:if="{{item.images.small}}"></image>
+      </view>
+	</navigator>
+	<navigator class="topage2" url="../page2/page2?id={{item.subject.id}}" wx:if="{{item.subject.id}}">
+     <view class="poster" style="float:left">
+          <image class="moviesImg" src="{{item.subject.images.small}}" wx:if="{{item.subject.images.small}}"></image> 
+      </view>
+	</navigator>
+<!-- 文字 -->
+      <view style="float:left" class="word">
+      <!-- 电影名 -->
+          <view class="title" wx:if="{{item.title}}">{{item.title}}</view>
+          <view class="title" wx:if="{{item.subject.title}}">{{item.subject.title}}</view>
+<!-- 导演 -->
+				<view>
+          <text class="directors">导演 :</text><span class="directors" wx:for="{{item.directors}}" wx:for-item="directors" wx:if="{{directors.name}}">
+					   {{directors.name}}
+					</span>
+					<span class="directors" wx:for="{{item.subject.directors}}" wx:for-item="directors" wx:if="{{directors.name}}">
+					   {{directors.name}}
+					</span>
+        </view> 
+         <!-- 主演 -->
+           <text class="casts">主演 :</text><span class="casts" wx:for="{{item.casts}}" wx:for-item="casts" wx:if="{{casts.name}}">
+					   {{casts.name}}/
+					</span>
+					<span class="casts" wx:for="{{item.subject.casts}}" wx:for-item="casts" wx:if="{{casts.name}}">
+					   {{casts.name}}/
+					</span>
+      </view>
+    </view>
+ </view>

@@ -1,0 +1,22 @@
+<view>
+  <view class="serch" style="overflow:hidden">
+    <image src='../../images/search.png'></image>
+    <input class="input" placeholder='影视名称' value="" bindinput="send"></input>
+    <button bindtap="search1" class="ss">搜索</button>
+  </view>
+  <view class="main" wx:for="{{movies}}" >
+    <navigator view class="second" url='../page1_1/page1_1?id={{item.id}}'>
+      <image src='{{item.images.large}}'></image>
+    </navigator>
+    <view class="second one">
+       <view class="name">{{item.title}} </view>
+       <view class="name1">导演:{{item.directors[0].name}} </view>
+       <view class="name1">主演:<text wx:for="{{item.casts}}" wx:for-item="itemName">{{itemName.name}}/</text> </view>
+    </view>
+    <view class="first">
+      <view class="text"><text>3021想看</text></view>
+      <view class="see">想看</view>
+    </view>
+  </view>
+</view>
+

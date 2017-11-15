@@ -1,0 +1,14 @@
+<!--pages/page2/page2.wxml-->
+<view >
+		<view class="header">
+			<image src="{{movies.images.large}}" class="img"></image>
+			<view class="title">{{movies.title}}({{movies.year}})</view>
+			<view class="rate">评分:<span>{{movies.rating.average}}</span></view>
+			<view class="rate">导演:<span wx:for="{{movies.directors}}" wx:for-item="director">{{director.name}}</span></view>
+			<view class="rate">主演:<span wx:for="{{movies.casts}}" wx:for-item="casts"> {{casts.name}} / </span></view>
+		</view>
+		<view class="abstract">
+		   <view class="abs">摘要:</view>
+			 <view class="abs_det">{{movies.summary}}</view>
+		</view>
+</view>

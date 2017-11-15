@@ -1,0 +1,80 @@
+/* pages/page2/page2.wxss */
+.serch{
+  width:100%;
+  padding:12px 10px 10px 16px;
+  border-bottom:1px solid #ccc;
+}
+.serch image{
+  margin:5px 5px 0 0;
+  height:12px;
+  width:12px;
+  float: left;
+}
+.serch .input{
+  font-size: 14px;
+	width:50%;
+	height:12px;
+	 float: left;
+}
+.ss{
+	 font-size: 12px;
+	 	height:25px;
+		line-height:25px;
+		float: right;
+		margin-right:30px;
+		width:15%;
+		border-radius:30%;
+		text-align: center;
+}
+.main{
+  padding:12px;
+  border-bottom:1px solid #ccc;
+  overflow: hidden;
+}
+.main .second{
+  float: left;
+}
+.main .first{
+  float:right;
+  padding-top: 14px;
+}
+.main .first .text{
+  text-align: center;
+  font-size: 9px;
+  color: #ffad2d;
+  padding-bottom: 7px;
+}
+.main .first .see{
+  width: 46px;
+  height: 22px;
+  border: 1px solid #ffad2d;
+  border-radius:4px; 
+  font-size:11px;
+  color:#ffad2d;
+  line-height: 22px;
+  text-align: center;
+}
+.main image{
+  height:106px;
+  width:76px;
+}
+.main .one{
+  padding-left:12px; 
+}
+.main .name{
+  font-size: 13px;
+  padding-bottom: 6px;
+ max-width: 150px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.main .name1{
+  font-size:9px;
+  padding-bottom:6px;
+  color: #999;
+overflow: hidden;
+ max-width: 150px;
+text-overflow: ellipsis;
+white-space: nowrap; 
+}

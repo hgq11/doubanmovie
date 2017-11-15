@@ -1,0 +1,38 @@
+/* pages/page2/page2.wxss */
+.header,.abstract{
+	 width:240px;
+	 margin:30px auto 0px;
+
+}
+.img{
+	  width:240px; 
+		height:280px;
+}
+
+.title{
+	font-size:15px;
+	text-align: center;
+	line-height:38px;
+}
+.rate{
+	font-size:10px;
+	color:#888;
+	line-height:23px;
+}
+.abstract{
+
+}
+.abs{
+
+	font-size:12px;
+	font-weight:bold;
+	line-height:40px;
+}
+.abs_det{
+	width:240px;
+	font-size:10px;
+	color:#666666;
+	text-indent:2em;
+	line-height:18px;
+	padding-bottom:20px;
+}

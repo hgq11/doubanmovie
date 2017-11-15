@@ -1,0 +1,96 @@
+.top{
+  height:180px;
+  width: 312px;
+  border:none;
+  border-radius:10px;
+  margin:25px auto 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+	width:180px;
+	height:180px;
+	border-radius:40px;
+	background:#06cb12;
+	font-size:100px;
+	font-weight:700;
+	text-align:center;
+	line-height:180px;
+	color:#fff;
+}
+.top .img{
+  height:100px;
+  width:180px;
+   /* margin:39px 0 0 123px ; */
+}
+.middle{
+  width:313px;
+  height:137px;
+  margin:0 auto 30px;
+  border:2px solid #dff0d1;
+  border-radius:8px;
+}
+.middle view{
+  border-bottom:1px solid #dff0d1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.middle image{
+  width:23px;
+  height:25px;
+  margin:10px;
+  float:left;
+}
+.middle input{
+  height:30px;
+  float: left;
+  font-size:14px;
+  color:#808080;
+  width:100%;
+  flex:1;
+}
+button{
+  width:80%;
+  height:44px;
+  border:1px solid #da0016;
+  text-align: center;
+  background:#eb0018;
+  margin-top:30px;
+  color:#fff;
+  line-height: 44px;
+}
+.picker{
+  font-size:14px;
+  width:100%;
+}
+scroll-view{
+  margin-bottom: 60px;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.Btn{
+  height: 50px;
+  width:300px;
+  margin:0 auto;
+  margin-top:50px;
+}

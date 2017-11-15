@@ -1,0 +1,40 @@
+/**index.wxss**/
+page{
+	
+}
+.slide-image{
+	width:100%;
+	height:160px;
+}
+.lb,.scroll-view_H{
+  margin-bottom:18px;
+}
+.title{
+	height:26px;
+	line-height:26px;
+	font-size:8px;
+	text-indent:10px;
+}
+.scroll-view_H{
+	display: inline-block;
+		white-space: nowrap;
+}
+.la1,.la2{
+
+	display:inline-block;
+	margin-left:8px;
+	width:76px;
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.la1 image{
+	width:76px;
+	height:106px;
+}
+.movieName{
+	text-align:center;
+	font-size:8px;
+	height:26px;
+}

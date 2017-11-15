@@ -1,0 +1,36 @@
+<!--pages/page1/page1.wxml-->
+<view wx-if="{{show}}">
+  <view class="top">
+    <view class="logo">豆</view>
+  </view>
+  <view class="middle">
+  <form bindsubmit="formSubmit">
+    <view>
+      <image src="../../images/map.png"></image>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="picker" name="picker">
+          登录方式: {{array[index]}}
+      </picker>
+    </view>
+    <view>
+      <image src="../../images/name.png"></image>
+      <input auto-focus="" class="weui-input" placeholder="请输入账号" value="{{input1}}" name="input1"></input>
+    </view>
+    <view style="border-bottom:none;">
+      <image src="../../images/secrect.png"></image>
+      <input class="weui-input"  placeholder="请输入账号密码" value="{{input2}}"name="input2"></input>
+    </view>
+    <button formType="submit" style="background:#123d49;border:none">确认发送</button>
+  </form>
+  </view>
+</view>
+<view class="container" wx:if="{{!show}}">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <button bindtap="exit" class="Btn"  style="background:#123d49;border:none">退出</button>
+</view>
+
