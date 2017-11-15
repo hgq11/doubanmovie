@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		var oCanvas = document.getElementById('c');
+
+		var gd = oCanvas.getContext('2d');
+
+		// 鼠标摁下的事件
+		oCanvas.onmousedown = function (evt) {
+			evt = evt || window.event;
+			gd.beginPath();
+			gd.moveTo(evt.clientX,evt.clientY);
+			document.onmousemove = function (evt) {
+				evt = evt || window.event;
+				gd.lineTo(evt.clientX,evt.clientY);
+				gd.stroke();
+			}
+
+			document.onmouseup = function () {
+				document.onmousemove = null;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id='c'></canvas>
+</body>
+</html>

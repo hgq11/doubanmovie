@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background: #ccc;
+		}
+		canvas {
+			background: #fff;
+		}
+	</style>
+	<script type="text/javascript">
+	function d2h (n) {
+		return n * Math.PI / 180;
+	}
+	function random (n,m) {
+		return Math.floor(Math.random() * (m - n) + n );
+	} 
+	window.onload = function () {
+		var oCanvas = document.getElementById('c');
+
+		var gd = oCanvas.getContext('2d');
+
+		// 数据
+		var arr = [100,80,60,40,20];
+
+		// 第一步: 求出每个数据占的角度
+
+		// 比例: 当前数据的角度 / 360
+		// 当前数据 / 总数据
+		// 保存角度
+		var arr1 = [];
+		var sum = 0;
+		for (var i = 0;i < arr.length;i++) {
+			sum += arr[i];
+		}
+
+		for (var i = 0;i < arr.length;i++) {
+			// 当前角度
+			var s = arr[i] / sum * 360;
+
+			arr1.push(s);
+		}
+		console.log(arr1);
+
+		var d = 0;
+
+		for (var i = 0;i < arr1.length;i++) {
+			drawArc(d,arr1[i] + d);
+			d += arr1[i];
+		}
+
+		function drawArc (start,end) {
+			gd.beginPath();
+
+			gd.moveTo(300,300);
+			gd.arc(300,300,100,d2h(start),d2h(end),false);
+			gd.fillStyle = 'rgb('+random(0,256)+','+random(0,256)+','+random(0,256)+')';
+			gd.fill();
+		}
+
+		/*
+		gd.beginPath();
+
+		gd.moveTo(300,300);
+		gd.arc(300,300,100,0,d2h(arr1[0]),false);
+		gd.fillStyle = 'rgb('+random(0,256)+','+random(0,256)+','+random(0,256)+')';
+		gd.fill();
+
+
+		gd.beginPath();
+
+		gd.moveTo(300,300);
+		gd.arc(300,300,100,d2h(arr1[0]),d2h(arr1[0]+arr1[1]),false);
+		gd.fillStyle = 'rgb('+random(0,256)+','+random(0,256)+','+random(0,256)+')';
+		gd.fill();
+
+		gd.beginPath();
+
+		gd.moveTo(300,300);
+		gd.arc(300,300,100,d2h(arr1[0]+arr1[1]),d2h(arr1[0]+arr1[1]+arr1[2]),false);
+		gd.fillStyle = 'rgb('+random(0,256)+','+random(0,256)+','+random(0,256)+')';
+		gd.fill();
+		*/
+
+	}
+	</script>
+</head>
+<body>
+	<canvas width="800" height="500" id='c'></canvas>
+</body>
+</html>
